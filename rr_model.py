@@ -61,16 +61,6 @@ class RoundRobinModel:
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format=' %(levelname)s - %(message)s')
     config = {
-        "OPENAI_KEYS":4,
-        "OPENAI_DEPLOYMENT_NAME":'35t16k0613',
-        "OPENAI_API_KEY1":'e3276cfc6b1d43159c570693e2b3c770',
-        "OPENAI_API_BASE1":'https://ami-voxt-je.openai.azure.com/',
-        "OPENAI_API_KEY2":'16f8ffa32eff4553843c1d69c0713951',
-        "OPENAI_API_BASE2":'https://ami-voxt-eu.openai.azure.com/',
-        "OPENAI_API_KEY3":'915c2099a0e648489f01369582132d04',
-        "OPENAI_API_BASE3":'https://ami-voxt-fc.openai.azure.com/',
-        "OPENAI_API_KEY4":'3099701b468e48148896b679628285a1',
-        "OPENAI_API_BASE4":'https://ami-voxt-us.openai.azure.com/',
     }
 
     model = RoundRobinModel(config)

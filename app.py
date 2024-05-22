@@ -35,7 +35,8 @@ DEBUG_FOLDER = baseDir / 'debug'
 REGEX_LIST = baseDir / 'regex_list.txt'
 
 application = Flask(__name__)
-application.config.from_envvar('PRSUMMARY_CONFIG_FILE')
+#application.config.from_envvar('PRSUMMARY_CONFIG_FILE')
+application.config.from_prefixed_env()
 logging.config.fileConfig(baseDir / 'logging.conf', disable_existing_loggers=False)
 logger_ = logging.getLogger("pr_summary")
 

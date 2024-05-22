@@ -8,11 +8,6 @@ import tiktoken
 from simple_handler import SimpleHandler
 logger = getLogger()
 
-openai.api_type = "azure"
-openai.api_base = "https://atd-nlp-test1-1.openai.azure.com/"
-openai.api_version = "2023-03-15-preview"
-openai.api_key = "49d9ff2cb5bd48ca80ce8704e5246f76"
-
 enc = tiktoken.get_encoding("cl100k_base")
 MAX_TOKEN = 2000
 
@@ -141,10 +136,6 @@ if __name__ == "__main__":
 
     ps_summary = PartSplitSummary()
     base_key_list = [
-        ("https://ami-voxt-je.openai.azure.com/", "e3276cfc6b1d43159c570693e2b3c770"),
-        ("https://ami-voxt-eu.openai.azure.com/", "16f8ffa32eff4553843c1d69c0713951"),
-        ("https://ami-voxt-fc.openai.azure.com/", "915c2099a0e648489f01369582132d04"),
-        ("https://ami-voxt-us.openai.azure.com/", "3099701b468e48148896b679628285a1")
     ]
 
     # モデルの登録
